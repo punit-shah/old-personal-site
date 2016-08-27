@@ -1,0 +1,12 @@
+{
+  "name": "punit-shah.github.io",
+  "version": "0.0.1",
+  "description": "Personal website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/punit-shah/punit-shah.github.io.git"
+  },
+  "author": "Punit Shah",
+  "license": "MIT",
+  "homepage": "https://punit-shah.github.io#"
+}
