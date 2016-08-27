@@ -25,5 +25,6 @@
     "precss": "mkdir -p dist/css",
     "css": "node-sass src/scss/ -o dist/css/ --output-style compressed",
     "html": "pug src/pug/*.pug -o dist/ -P",
+    "build": "npm run lint && npm run js && npm run css && npm run html"
   }
 }
