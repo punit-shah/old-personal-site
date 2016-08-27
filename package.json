@@ -14,6 +14,7 @@
     "babel-loader": "^6.2.5",
     "babel-preset-latest": "^6.14.0",
     "eslint": "^3.4.0",
+    "http-server": "^0.9.0",
     "node-sass": "^3.8.0",
     "pug-cli": "^1.0.0-alpha6",
     "webpack": "^1.13.2"
@@ -25,6 +26,8 @@
     "precss": "mkdir -p dist/css",
     "css": "node-sass src/scss/ -o dist/css/ --output-style compressed",
     "html": "pug src/pug/*.pug -o dist/ -P",
-    "build": "npm run lint && npm run js && npm run css && npm run html"
+    "build": "npm run lint && npm run js && npm run css && npm run html",
+    "start": "http-server dist/ -s",
+    "open:local": "open http://localhost:8080"
   }
 }
