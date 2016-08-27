@@ -8,5 +8,15 @@
   },
   "author": "Punit Shah",
   "license": "MIT",
-  "homepage": "https://punit-shah.github.io#"
+  "homepage": "https://punit-shah.github.io#",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-latest": "^6.14.0",
+    "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "prejs": "mkdir -p dist/js",
+    "js": "node scripts/js.js"
+  }
 }
