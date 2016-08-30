@@ -19,6 +19,9 @@
     "pug-cli": "^1.0.0-alpha6",
     "webpack": "^1.13.2"
   },
+  "dependencies": {
+    "normalize.css": "^4.2.0"
+  },
   "scripts": {
     "lint": "eslint src/js/*.js || true",
     "prejs": "mkdir -p dist/js",
