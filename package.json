@@ -8,7 +8,7 @@
   },
   "author": "Punit Shah",
   "license": "MIT",
-  "homepage": "https://punit-shah.github.io#",
+  "homepage": "https://punit-shah.github.io",
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
@@ -25,8 +25,10 @@
     "js": "node scripts/js.js",
     "precss": "mkdir -p dist/css",
     "css": "node-sass src/scss/ -o dist/css/ --output-style compressed",
+    "preimg": "mkdir -p dist/img && rm -f dist/img/*",
+    "img": "cp -r src/img/* dist/img",
     "html": "pug src/pug/*.pug -o dist/ -P",
-    "build": "npm run lint && npm run js && npm run css && npm run html",
+    "build": "npm run lint && npm run js && npm run css && npm run img && npm run html",
     "start": "http-server dist/ -s",
     "open:local": "open http://localhost:8080"
   }
