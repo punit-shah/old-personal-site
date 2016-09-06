@@ -38,10 +38,19 @@ fs.readdirSync('src/js')
 
 const compiler = webpack(config);
 
-compiler.run((err, stats) => {
+function handler(err, stats) {
     if (err) throw err;
     console.log(stats.toString({
         chunks: false,
         colors: true,
     }));
-});
+}
+
+if (process.argv.slice(2).indexOf('--watch') > -1) {
+    compiler.watch({
+        aggregateTimeout: 300,
+        poll: false
+    }, handler);
+} else {
+    compiler.run(handler);
+}
