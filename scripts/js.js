@@ -1,23 +1,47 @@
+const webpack = require('webpack');
+const path = require('path');
 const fs = require('fs');
-const exec = require('child_process').exec;
 
-fs.readdir('src/js', function(err, files) {
-    files.map((file) => {
+const srcJs = path.resolve(process.cwd(), 'src', 'js');
+
+const babelSettings = JSON.parse(fs.readFileSync('.babelrc'));
+
+const config = {
+    context: srcJs,
+    entry: {},
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                loader: 'babel',
+                query: babelSettings,
+            },
+        ]
+    },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(process.cwd(), 'dist', 'js'),
+    },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+    ]
+};
+
+fs.readdirSync('src/js')
+    .map((file) => {
         if (file.endsWith('.js')) {
-            createBundle(file);
+            const name = file.slice(0, -3);
+            config.entry[name] = `./${name}`;
         }
     });
-});
 
-function createBundle(file) {
-    const cmd = `webpack src/js/${file} dist/js/${file} --module-bind 'js=babel' --color --progress -p`;
-    exec(cmd, function (err, stdout, stderr) {
-        if (err) {
-            console.error(`error when creating bundle: ${err}`);
-            return;
-        }
-        console.log(cmd);
-        console.log(stdout);
-        console.log(stderr);
-    });
-}
+const compiler = webpack(config);
+
+compiler.run((err, stats) => {
+    if (err) throw err;
+    console.log(stats.toString({
+        chunks: false,
+        colors: true,
+    }));
+});
