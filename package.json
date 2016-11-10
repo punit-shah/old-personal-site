@@ -26,8 +26,8 @@
   "scripts": {
     "lint": "eslint src/js/*.js || true",
     "prejs": "mkdir -p dist/js",
-    "js": "node scripts/js.js",
-    "js:watch": "node scripts/js.js --watch",
+    "js": "webpack",
+    "js:watch": "webpack --watch",
     "precss": "mkdir -p dist/css",
     "css": "node-sass src/scss/ -o dist/css/ --output-style compressed",
     "preimg": "mkdir -p dist/img && rm -f dist/img/*",
