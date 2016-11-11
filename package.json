@@ -16,6 +16,7 @@
     "eslint": "^3.4.0",
     "http-server": "^0.9.0",
     "node-sass": "^3.8.0",
+    "parallelshell": "^2.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "webpack": "^1.13.2"
   },
@@ -30,10 +31,13 @@
     "js:watch": "webpack --watch",
     "precss": "mkdir -p dist/css",
     "css": "node-sass src/scss/ -o dist/css/ --output-style compressed",
+    "css:watch": "npm run css && node-sass src/scss/ -o dist/css/ --output-style compressed -w",
     "preimg": "mkdir -p dist/img && rm -f dist/img/*",
     "img": "cp -r src/img/* dist/img",
     "html": "pug src/pug/*.pug -o dist/ -P",
+    "html:watch": "pug src/pug/*.pug -o dist/ -P -w",
     "build": "npm run lint && npm run js && npm run css && npm run img && npm run html",
+    "watch": "parallelshell 'npm run js:watch' 'npm run css:watch' 'npm run html:watch'",
     "start": "http-server dist/ -s",
     "open:local": "open http://localhost:8080"
   }
