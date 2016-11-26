@@ -14,6 +14,7 @@
     "babel-loader": "^6.2.5",
     "babel-preset-latest": "^6.14.0",
     "eslint": "^3.4.0",
+    "eslint-loader": "^1.6.1",
     "http-server": "^0.9.0",
     "node-sass": "^3.8.0",
     "parallelshell": "^2.0.0",
@@ -36,7 +37,7 @@
     "img": "cp -r src/img/* dist/img",
     "html": "pug src/pug/*.pug -o dist/ -P",
     "html:watch": "pug src/pug/*.pug -o dist/ -P -w",
-    "build": "yarn run lint && yarn run js && yarn run css && yarn run img && yarn run html",
+    "build": "yarn run js && yarn run css && yarn run img && yarn run html",
     "watch": "parallelshell 'yarn run js:watch' 'yarn run css:watch' 'yarn run html:watch'",
     "start": "http-server dist/ -s",
     "open:local": "xdg-open http://localhost:8080 || open http://localhost:8080"

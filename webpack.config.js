@@ -9,13 +9,19 @@ const config = {
   context: process.cwd() + '/src/js',
   entry: {},
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: 'eslint-loader',
+      }
+    ],
     loaders: [
       {
         test: /\.js$/,
         loader: 'babel',
         query: babelSettings,
       },
-    ]
+    ],
   },
   output: {
     filename: '[name].js',
@@ -28,7 +34,10 @@ const config = {
       }
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
-  ]
+  ],
+  eslint: {
+    configFile: '.eslintrc.json'
+  },
 };
 
 fs.readdirSync('src/js').map((file) => {
