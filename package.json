@@ -25,19 +25,19 @@
     "normalize.css": "^4.2.0"
   },
   "scripts": {
-    "lint": "eslint src/js/*.js || true",
+    "lint": "eslint src/js/*.js",
     "prejs": "mkdir -p dist/js",
     "js": "webpack",
     "js:watch": "webpack --watch",
     "precss": "mkdir -p dist/css",
     "css": "node-sass src/scss/ -o dist/css/ --output-style compressed",
-    "css:watch": "npm run css && node-sass src/scss/ -o dist/css/ --output-style compressed -w",
+    "css:watch": "yarn run css && node-sass src/scss/ -o dist/css/ --output-style compressed -w",
     "preimg": "mkdir -p dist/img && rm -f dist/img/*",
     "img": "cp -r src/img/* dist/img",
     "html": "pug src/pug/*.pug -o dist/ -P",
     "html:watch": "pug src/pug/*.pug -o dist/ -P -w",
-    "build": "npm run lint && npm run js && npm run css && npm run img && npm run html",
-    "watch": "parallelshell 'npm run js:watch' 'npm run css:watch' 'npm run html:watch'",
+    "build": "yarn run lint && yarn run js && yarn run css && yarn run img && yarn run html",
+    "watch": "parallelshell 'yarn run js:watch' 'yarn run css:watch' 'yarn run html:watch'",
     "start": "http-server dist/ -s",
     "open:local": "xdg-open http://localhost:8080 || open http://localhost:8080"
   }

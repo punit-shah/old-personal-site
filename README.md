@@ -4,23 +4,27 @@ A simple website.
 
 ## Getting started
 
-Clone the repository and run `npm install`.
+These instructions are for myself if I ever forget what to do.
+
+Requires [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/).
+
+Clone the repository and run `yarn install`.
 
 Build the site
 
 ```sh
-npm run build
+yarn run build
 ```
 
 Listen for changes to source files and automatically build changes
 
 ```sh
-npm run watch
+yarn run watch
 ```
 
-Serve the site locally and open http://localhost:8080 in your browser
+Start the development server and open http://localhost:8080 in your browser
 
 ```sh
-npm start &
-npm run open:local
+yarn start &
+yarn run open:local
 ```
