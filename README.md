@@ -1,6 +1,6 @@
 # punit-shah.github.io
 
-A simple website.
+Personal website
 
 ## Getting started
 
@@ -13,25 +13,25 @@ Clone the repository and run `yarn install`.
 Build the site
 
 ```sh
-yarn run build
+yarn build
 ```
 
 Listen for changes to source files and automatically build changes
 
 ```sh
-yarn run watch
+yarn watch
 ```
 
 Start the development server and open http://localhost:8080 in your browser
 
 ```sh
 yarn start &
-yarn run open:local
+yarn open:local
 ```
 
 Deploy the site to Github Pages and open http://punit-shah.github.io/ in your browser
 
 ```sh
-yarn run deploy
-yarn run open:live
+yarn deploy
+yarn open:live
 ```
