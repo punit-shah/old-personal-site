@@ -40,6 +40,8 @@
     "build": "yarn run js && yarn run css && yarn run img && yarn run html",
     "watch": "parallelshell 'yarn run js:watch' 'yarn run css:watch' 'yarn run html:watch'",
     "start": "http-server dist/ -s",
-    "open:local": "xdg-open http://localhost:8080 || open http://localhost:8080"
+    "deploy": "scripts/deploy.sh",
+    "open:local": "xdg-open http://localhost:8080 || open http://localhost:8080",
+    "open:live": "xdg-open https://punit-shah.github.io || open https://punit-shah.github.io"
   }
 }
