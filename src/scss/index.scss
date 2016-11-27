@@ -1,12 +1,26 @@
 @import 'common';
 
 .section {
+  min-height: 100vh;
   height: 100vh;
   width: 100%;
   display: table;
 
   &__title {
     margin: 0 0 0.83em;
+  }
+
+  &--work {
+    background-color: #eee;
+  }
+
+  &--about {
+    background-color: #ddd;
+  }
+
+  &--contact {
+    text-align: center;
+    background-color: #ccc;
   }
 
   > .container {
@@ -79,17 +93,4 @@
     font-family: $monospace-font;
     font-size: 0.875rem;
   }
-}
-
-.work {
-  background-color: #eee;
-}
-
-.about {
-  background-color: #ddd;
-}
-
-.contact {
-  text-align: center;
-  background-color: #ccc;
 }
