@@ -39,11 +39,12 @@ function onWindowScroll() {
     }
   });
   const $currentSection = scrolledSections[scrolledSections.length - 1];
+  const $currentNavLink = $navLinks.filter(`[href="#${$currentSection.attr('id')}"]`);
 
-  $navLinks
-    .removeClass('active')
-    .filter(`[href="#${$currentSection.attr('id')}"]`)
-    .addClass('active');
+  if (!$currentNavLink.hasClass('active')) {
+    $navLinks.removeClass('active');
+    $currentNavLink.addClass('active');
+  }
 }
 
 export default function navbarScroll() {
