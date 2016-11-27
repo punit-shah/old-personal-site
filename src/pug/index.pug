@@ -11,32 +11,19 @@ block body
 
   section.section.cover#cover
     .container
-      h1.cover__header {punit shah}
-      p.cover__lead Developer
-      hr.cover__line
-      figure.error
-        .error__img
-          img(src='img/error.png' alt='Error: ( ‾ʖ̫‾)')
-          .error__bubble Please don't touch me.
-        figcaption.error__caption This is not an error, but a solution.
+      include ./includes/cover.pug
 
   section.section.section--work#work
     .container
-      h2.section__title Work
+      include ./includes/work.pug
 
   section.section.section--about#about
     .container
-      h2.section__title About
-      p.section__paragraph.
-        I am a Computer Science student at Aberystwyth University, currently on a placement year working as a web developer for <a href="http://www.bbc.co.uk/news">BBC News</a> in London.
-      p.section__paragraph.
-        I am a foolish dreamer in love with code, video games and good coffee.
-      p.section__paragraph.
-        This site was built by hand, from scratch, not only as a way to showcase some of the work I've done, but also as a learning exercise, allowing me to play and experiment, and practice my front-end development skills. It uses the <a href="https://pugjs.org/">pug</a> template language, is styled with <a href="http://sass-lang.com/">Sass</a>, and transpiles ES2015+ to ES5 with <a href="https://babeljs.io/">Babel</a>. The source for this site can be found on <a href="https://github.com/punit-shah/punit-shah.github.io">Github</a>.
+      include ./includes/about.pug
 
   section.section.section--contact#contact
     .container
-      h2.section__title Contact
+      include ./includes/contact.pug
 
 block js
   script(src='js/index.js')
