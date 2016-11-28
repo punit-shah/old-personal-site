@@ -16,7 +16,7 @@ function getSectionFromNavLink($navLink) {
 }
 
 function scrollToElement($element) {
-  const scrollTop = $element.offset().top;
+  const scrollTop = $element.offset().top - $navbar.outerHeight();
   $('html, body').stop().animate({
     scrollTop: scrollTop
   }, 300);
@@ -32,7 +32,7 @@ function onNavLinkClick(e) {
 }
 
 function onWindowScroll() {
-  const windowScrollTop = $(this).scrollTop() + $navbar.outerHeight();
+  const windowScrollTop = $(this).scrollTop() + $navbar.outerHeight() + 1;
   const scrolledSections = $navSections.map(function () {
     if ($(this).offset().top < windowScrollTop) {
       return this;
