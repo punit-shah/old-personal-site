@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body><!--[if lt IE 11]>
-    <p class="upgrade-browser-msg">Sorry, this site doesn't support your browser. Please consider switching to a modern browser like <a href="https://www.google.com/chrome/browser/">Google Chrome</a> or <a href="https://www.mozilla.org/en-GB/firefox/">Mozilla Firefox</a>.</p><![endif]-->
+    <p class="upgrade-browser-msg" style="position: relative; z-index: 5; margin: 0; padding: 16px; background-color: #fff; border-bottom: solid 1px #555">Sorry, this site doesn't support your browser. Please consider switching to a modern browser like <a href="https://www.google.com/chrome/browser/">Google Chrome</a> or <a href="https://www.mozilla.org/en-GB/firefox/">Mozilla Firefox</a>.</p><![endif]-->
     <nav class="navbar">
       <div class="container">
         <header class="navbar__header">
-          <div class="navbar__brand"><a class="logo dark-to-light" href="/#">:P</a></div>
+          <div class="navbar__brand"><a class="logo dark-to-light" href="#">:P</a></div>
           <button class="navbar__toggler dark-to-light" aria-expanded="false">&equiv;</button>
         </header>
         <nav class="navbar__nav">
           <ul class="navbar__list">
-            <li class="navbar__item"><a class="navbar__link" href="/#about">about</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="/#contact">contact</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="/work.html">work</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#work">work</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#about">about</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#contact">contact</a></li>
           </ul>
         </nav>
       </div>
@@ -31,29 +31,27 @@
         <hr class="cover__line">
         <figure class="error">
           <div class="error__img"><img src="img/error.png" alt="Error: ( ‾ʖ̫‾)">
-            <div class="error__bubble">Please don't touch me.</div>
+            <div class="error__bubble"></div>
           </div>
           <figcaption class="error__caption">This is not an error, but a solution.</figcaption>
         </figure>
       </div>
     </section>
-    <section class="section work" id="work">
+    <section class="section section--work" id="work">
       <div class="container">
         <h2 class="section__title">Work</h2>
       </div>
     </section>
-    <section class="section about" id="about">
+    <section class="section section--about" id="about">
       <div class="container">
         <h2 class="section__title">About</h2>
-        <p class="section__paragraph">I am a Computer Science student at Aberystwyth University, currently on a placement year working as a web developer for <a href="http://www.bbc.co.uk/news">BBC News</a> in London.</p>
+        <p class="section__paragraph">I am a Computer Science student at Aberystwyth University, currently on my final year. I spent the previous year on a placement working as a web developer for <a href="http://www.bbc.co.uk/news">BBC News</a> in London.</p>
         <p class="section__paragraph">I am a foolish dreamer in love with code, video games and good coffee.</p>
-        <p class="section__paragraph">
-          This site was built by hand, from scratch, not only as a way to showcase some of the work I've done, but also as a learning exercise, allowing me to play and experiment, and practice my front-end development skills. It uses the <a href="https://pugjs.org/">pug</a> template language, is styled with <a href="http://sass-lang.com/">Sass</a>, and transpiles ES2015+ to ES5 with <a href="https://babeljs.io/">Babel</a>. The source for this site can be found on <a href="https://github.com/punit-shah/punit-shah.github.io">Github</a>.
-          
-        </p>
+        <p class="section__paragraph">This site was built by hand, from scratch, not only as a way to showcase some of the work I've done, but also as a learning exercise, allowing me to play and experiment, and practice my front-end development skills.</p>
+        <p class="section__paragraph">The only external front-end libraries it uses are <a href="https://jquery.com/">jQuery</a> and <a href="https://necolas.github.io/normalize.css/">normalize.css</a>. To help me build it, I used the <a href="https://pugjs.org/">pug</a> template language, <a href="http://sass-lang.com/">Sass</a> to style it, and <a href="https://babeljs.io/">Babel</a> to transpile ES2015+ to ES5. The source for this site can be found on <a href="https://github.com/punit-shah/punit-shah.github.io">Github</a>.</p>
       </div>
     </section>
-    <section class="section contact" id="contact">
+    <section class="section section--contact" id="contact">
       <div class="container">
         <h2 class="section__title">Contact</h2>
       </div>
