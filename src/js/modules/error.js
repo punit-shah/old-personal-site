@@ -12,7 +12,7 @@ function getMessage() {
     'someone has stolen my trees',
     'your trousers are on fire',
     function time() {
-      return `the time is now ${Date.now()}`;
+      return `the time is now ${Date.now()} and i am magic`;
     },
   ];
 
