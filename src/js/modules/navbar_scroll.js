@@ -34,7 +34,7 @@ function onNavLinkClick(e) {
 function onWindowScroll() {
   const windowScrollTop = $(this).scrollTop() + $navbar.outerHeight() + 1;
   const scrolledSections = $navSections.map(function () {
-    if ($(this).offset().top < windowScrollTop) {
+    if ($(this).offset().top <= windowScrollTop) {
       return this;
     }
   });
