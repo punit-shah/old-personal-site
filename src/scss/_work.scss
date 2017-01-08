@@ -1,11 +1,50 @@
 .section--work {
   background-color: #eee;
-  // display: block;
-  // padding: 2rem 0;
+  display: block;
+  padding: 2rem 0;
   text-align: center;
+  height: auto;
 
-  // > .container {
-  //   display: block;
-  //   vertical-align: baseline;
-  // }
+  > .container {
+    display: block;
+    vertical-align: baseline;
+  }
+}
+
+.work-row {
+  width: 100%;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.work-item {
+  float: left;
+  margin: .5rem 0;
+  background-color: #666;
+  color: #fff;
+  height: 8rem;
+
+  @media (min-width: 600px) {
+    margin: .25rem;
+    height: 15rem;
+  }
+}
+
+.work-row:nth-child(even) .work-item {
+  width: 100%;
+
+  @media (min-width: 600px) {
+    width: calc(50% - .5rem);
+  }
+}
+
+.work-row:nth-child(odd) .work-item {
+  width: 100%;
+
+  @media (min-width: 600px) {
+    width: calc(100% / 3 - .5rem);
+  }
 }

@@ -43,8 +43,9 @@ a {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 
-  &::after {
+  &:after {
     content: '';
+    display: table;
     clear: both;
   }
 
