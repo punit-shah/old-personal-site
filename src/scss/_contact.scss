@@ -1,4 +1,88 @@
 .section--contact {
-  text-align: center;
   background-color: #ccc;
+}
+
+.contact-message {
+  @media (min-width: 800px) {
+    width: 50%;
+    float: left;
+    font-size: 1.5rem;
+    margin: 0;
+    padding-right: 32px;
+  }
+}
+
+.contact-form {
+  text-align: left;
+  width: 100%;
+
+  @media (min-width: 800px) {
+    width: 50%;
+    float: right;
+  }
+}
+
+.contact-form__field {
+  margin: 0 0 12px;
+
+  > input, > textarea {
+    padding: 4px;
+    font-size: 0.8125rem;
+    border: solid 2px transparent;
+
+    &:focus {
+      border-color: #000;
+    }
+  }
+
+  &--small {
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    > label, > input {
+      float: left;
+    }
+  }
+
+  &--large {
+    > label, > textarea {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+    > label {
+      margin: 0 0 4px;
+    }
+    > textarea {
+      height: 15rem;
+    }
+  }
+
+  @media (min-width: 800px) {
+    &--small {
+      > label {
+        width: 5rem;
+      }
+      > input {
+        width: calc(100% - 5rem);
+      }
+    }
+  }
+}
+
+.contact-btn {
+  cursor: pointer;
+  background-color: #fff;
+  border-width: 2px;
+  display: block;
+  margin: auto;
+  width: 8rem;
+  border-radius: 1em;
+
+  &:hover, &:focus, &:active {
+    border-width: 2px;
+  }
 }

@@ -158,22 +158,3 @@
     }
   }
 }
-
-.dark-to-light {
-  background-color: #333;
-  color: #fff;
-  border: solid 1px transparent;
-  transition: background-color .4s;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: #fff;
-    color: #333;
-    border: solid 1px #333;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto;
-  }
-}
