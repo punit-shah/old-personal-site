@@ -6,17 +6,18 @@ p.contact-message.
 form(action='https://formspree.io/pus1@aber.ac.uk' method='post').contact-form
   .contact-form__field.contact-form__field--small
     label(for='contact-form__name') Name:
-    input(type='text' name='name' id='contact-form__name' required)
+    input(type='text' name='name' id='contact-form__name' placeholder='Your name here' required)
   .contact-form__field.contact-form__field--small
     label(for='contact-form__email') Email:
-    input(type='email' name='email' id='contact-form__email' placeholder='someone@example.com' required)
+    input(type='email' name='email' id='contact-form__email' placeholder='youremail@example.com' required)
   .contact-form__field.contact-form__field--large
     label(for='contact-form__message') Message:
     <textarea type="text" name="message" id="contact-form__message" required></textarea>
-  input(type='hidden' name='_next' value='//punit-shah.github.io/?submitted=true#contact') <!-- todo: thank you message -->
+  input(type='hidden' name='_next' value='//punit-shah.github.io/?submitted=true#contact')
+  // todo: thank you message
   input(type='hidden' name='_format' value='plain')
   input(type='text' name='_gotcha' style='display:none')
 
   button.contact-btn.light-to-dark(type='submit') Send
 
-<!-- todo: social links -->
+// todo: social links
