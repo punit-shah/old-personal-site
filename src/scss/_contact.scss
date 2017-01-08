@@ -45,6 +45,14 @@
     > label, > input {
       float: left;
     }
+
+    > label {
+      width: 5rem;
+    }
+
+    > input {
+      width: calc(100% - 5rem);
+    }
   }
 
   &--large {
@@ -58,17 +66,6 @@
     }
     > textarea {
       height: 15rem;
-    }
-  }
-
-  @media (min-width: 800px) {
-    &--small {
-      > label {
-        width: 5rem;
-      }
-      > input {
-        width: calc(100% - 5rem);
-      }
     }
   }
 }
