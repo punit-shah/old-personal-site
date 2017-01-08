@@ -56,6 +56,27 @@
     <section class="section section--contact" id="contact">
       <div class="container">
         <h2 class="section__title">Contact</h2>
+        <p class="contact-message">
+          I'd love to hear from you. Drop me a message!
+          
+        </p>
+        <form class="contact-form" action="https://formspree.io/pus1@aber.ac.uk" method="post">
+          <div class="contact-form__field contact-form__field--small">
+            <label for="contact-form__name">Name:</label>
+            <input type="text" name="name" id="contact-form__name" required>
+          </div>
+          <div class="contact-form__field contact-form__field--small">
+            <label for="contact-form__email">Email:</label>
+            <input type="email" name="email" id="contact-form__email" placeholder="someone@example.com" required>
+          </div>
+          <div class="contact-form__field contact-form__field--large">
+            <label for="contact-form__message">Message:</label><textarea type="text" name="message" id="contact-form__message" required></textarea>
+          </div>
+          <input type="hidden" name="_next" value="//punit-shah.github.io/?submitted=true#contact">
+          <input type="hidden" name="_format" value="plain">
+          <input type="text" name="_gotcha" style="display:none">
+          <button class="contact-btn light-to-dark" type="submit">Send</button>
+        </form>
       </div>
     </section>
     <script src="js/index.js"></script>
