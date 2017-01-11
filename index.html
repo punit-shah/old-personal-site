@@ -42,6 +42,7 @@
       <div class="container">
         <h2 class="section__title">Work</h2>
         <p>Coming soon!</p>
+        <!-- todo: add work-->
       </div>
     </section>
     <section class="section section--about" id="about">
@@ -50,7 +51,7 @@
         <p class="section__paragraph">I am a Computer Science student at Aberystwyth University, currently on my final year. I spent the previous year on a placement working as a web developer for <a href="http://www.bbc.co.uk/news">BBC News</a> in London.</p>
         <p class="section__paragraph">I am a foolish dreamer in love with code, video games and good coffee.</p>
         <p class="section__paragraph">This site was built by hand, from scratch, not only as a way to showcase some of the work I've done, but also as a learning exercise, allowing me to play and experiment, and practice my front-end development skills.</p>
-        <p class="section__paragraph">The only external front-end libraries it uses are <a href="https://jquery.com/">jQuery</a> and <a href="https://necolas.github.io/normalize.css/">normalize.css</a>. To help me build it, I used the <a href="https://pugjs.org/">pug</a> template language, <a href="http://sass-lang.com/">Sass</a> to style it, and <a href="https://babeljs.io/">Babel</a> to transpile ES2015+ to ES5. The source for this site can be found on <a href="https://github.com/punit-shah/punit-shah.github.io">Github</a>.</p>
+        <p class="section__paragraph">The only external front-end libraries it uses are <a href="https://jquery.com/">jQuery</a> and <a href="https://necolas.github.io/normalize.css/">normalize.css</a>. To help me build it, I used the <a href="https://pugjs.org/">pug</a> template language, <a href="http://sass-lang.com/">Sass</a> to style it, and <a href="https://babeljs.io/">Babel</a> to transpile ES2015+ to ES5. The source for this site can be found on <a href="https://github.com/punit-shah/punit-shah.github.io">GitHub</a>.</p>
       </div>
     </section>
     <section class="section section--contact" id="contact">
@@ -63,20 +64,22 @@
         <form class="contact-form" action="https://formspree.io/pus1@aber.ac.uk" method="post">
           <div class="contact-form__field contact-form__field--small">
             <label for="contact-form__name">Name:</label>
-            <input type="text" name="name" id="contact-form__name" required>
+            <input type="text" name="name" id="contact-form__name" placeholder="Your name here" required>
           </div>
           <div class="contact-form__field contact-form__field--small">
             <label for="contact-form__email">Email:</label>
-            <input type="email" name="email" id="contact-form__email" placeholder="someone@example.com" required>
+            <input type="email" name="email" id="contact-form__email" placeholder="youremail@example.com" required>
           </div>
           <div class="contact-form__field contact-form__field--large">
             <label for="contact-form__message">Message:</label><textarea type="text" name="message" id="contact-form__message" required></textarea>
           </div>
           <input type="hidden" name="_next" value="//punit-shah.github.io/?submitted=true#contact">
+          <!-- todo: thank you message-->
           <input type="hidden" name="_format" value="plain">
           <input type="text" name="_gotcha" style="display:none">
           <button class="contact-btn light-to-dark" type="submit">Send</button>
         </form>
+        <!-- todo: social links-->
       </div>
     </section>
     <script src="js/index.js"></script>
