@@ -13,7 +13,7 @@
 
 .work-item {
   display: block;
-  margin: .5rem 0;
+  margin: 1rem 0;
   background-color: #666;
   color: #fff;
   height: 12rem;
@@ -63,9 +63,12 @@
 
   @media (min-width: 600px) {
     float: left;
-    margin: .25rem;
-    height: 15rem;
     width: calc(50% - .5rem);
+    margin: .25rem;
+  }
+
+  @media (min-width: 800px) {
+    height: 15rem;
 
     &:before {
       right: 0;
