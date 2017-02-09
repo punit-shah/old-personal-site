@@ -15,6 +15,8 @@
   display: block;
   margin: 1rem 0;
   background-color: #666;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
   height: 12rem;
   text-align: left;
@@ -44,8 +46,12 @@
   }
 
   &__title {
-    padding-top: 10rem;
     width: 60%;
+
+    span {
+      position: absolute;
+      bottom: .5rem;
+    }
   }
 
   &__description {
@@ -55,10 +61,15 @@
     font-weight: normal;
     background-color: #fff;
     color: #222;
+    opacity: 0.9;
   }
 
   &:hover, &:focus, &:active {
     color: #fff;
+
+    .work-item__description {
+      opacity: 1;
+    }
   }
 
   @media (min-width: 600px) {
@@ -83,7 +94,11 @@
 
     &__title {
       height: 2.5rem;
-      padding: .5rem;
+
+      span {
+        position: static;
+        bottom: auto;
+      }
     }
 
     &__description {
@@ -91,6 +106,7 @@
       padding: 0 .5rem .5rem;
       background: transparent;
       color: #fff;
+      opacity: 1;
     }
 
     &:hover, &:active, &:focus {
