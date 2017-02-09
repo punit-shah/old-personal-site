@@ -36,6 +36,10 @@ a {
   }
 }
 
+code, pre, kbd {
+  font-family: $monospace-font;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
