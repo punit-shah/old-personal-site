@@ -1,3 +1,22 @@
+.text-center {
+  text-align: center;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .dark-to-light {
   background-color: #333;
   color: #fff;

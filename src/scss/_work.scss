@@ -51,7 +51,6 @@
 
   &__title {
     display: block;
-    border: 0;
     width: 60%;
     text-shadow: 3px 3px 8px #212121;
 
@@ -101,6 +100,15 @@
       right: 0;
     }
 
+    a {
+      color: #fff;
+      border: 0;
+
+      &:hover, &:active, &:focus {
+        color: #5db2ff;
+      }
+    }
+
     &__title, &__description {
       float: none;
       width: 100%;
@@ -119,10 +127,6 @@
       color: #fff;
       opacity: 1;
       text-shadow: 2px 2px 4px #212121;
-
-      a {
-        color: #fff;
-      }
     }
 
     &:hover, &:active, &:focus {

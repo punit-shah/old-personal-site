@@ -71,7 +71,6 @@
 
 .contact-btn {
   cursor: pointer;
-  background-color: #fff;
   border-width: 2px;
   display: block;
   margin: auto;
@@ -82,5 +81,23 @@
 
   &:hover, &:focus, &:active {
     border-width: 2px;
+  }
+}
+
+.social-links {
+  list-style: none;
+
+  > li {
+    display: inline-block;
+    margin: 0 1rem;
+
+    > a {
+      display: block;
+      border-radius: 50%;
+      text-align: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      line-height: calc(2.25rem - 2px);
+    }
   }
 }

@@ -1,23 +1,38 @@
 h2.section__title Contact
 
-p.contact-message.
-  I'd love to hear from you. Drop me a message!
+.clearfix
+  p.contact-message.
+    I'd love to hear from you. Drop me a message!
 
-form(action='https://formspree.io/pus1@aber.ac.uk' method='post').contact-form
-  .contact-form__field.contact-form__field--small
-    label(for='contact-form__name') Name:
-    input(type='text' name='name' id='contact-form__name' placeholder='Your name here' required)
-  .contact-form__field.contact-form__field--small
-    label(for='contact-form__email') Email:
-    input(type='email' name='email' id='contact-form__email' placeholder='youremail@example.com' required)
-  .contact-form__field.contact-form__field--large
-    label(for='contact-form__message') Message:
-    <textarea type="text" name="message" id="contact-form__message" required></textarea>
-  input(type='hidden' name='_next' value='//punit-shah.github.io/?submitted=true#contact')
-  // todo: thank you message
-  input(type='hidden' name='_format' value='plain')
-  input(type='text' name='_gotcha' style='display:none')
+  form(action='https://formspree.io/pus1@aber.ac.uk' method='post').contact-form
+    .contact-form__field.contact-form__field--small
+      label(for='contact-form__name') Name:
+      input(type='text' name='name' id='contact-form__name' placeholder='Your name here' required)
+    .contact-form__field.contact-form__field--small
+      label(for='contact-form__email') Email:
+      input(type='email' name='email' id='contact-form__email' placeholder='youremail@example.com' required)
+    .contact-form__field.contact-form__field--large
+      label(for='contact-form__message') Message:
+      <textarea type="text" name="message" id="contact-form__message" required></textarea>
+    input(type='hidden' name='_next' value='//punit-shah.github.io/?submitted=true#contact')
+    // todo: thank you message
+    input(type='hidden' name='_format' value='plain')
+    input(type='text' name='_gotcha' style='display:none')
 
-  button.contact-btn.light-to-dark(type='submit') Send
+    button.contact-btn.light-to-dark(type='submit') Send
 
 // todo: social links
+
+ul.social-links.text-center
+  li
+    a.dark-to-light(target='_blank' href='https://github.com/punit-shah')
+      i.fa.fa-github(aria-hidden="true")
+      span.sr-only GitHub
+  li
+    a.dark-to-light(target='_blank' href='https://twitter.com/bakapunt')
+      i.fa.fa-twitter(aria-hidden="true")
+      span.sr-only Twitter
+  li
+    a.dark-to-light(target='_blank' href='https://www.linkedin.com/in/punit-shah')
+      i.fa.fa-linkedin(aria-hidden="true")
+      span.sr-only LinkedIn
