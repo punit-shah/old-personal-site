@@ -102,7 +102,7 @@
       width: auto;
       border: none;
 
-      &::after {
+      &:after {
         content: '';
         clear: both;
       }

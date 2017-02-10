@@ -1,11 +1,138 @@
 .section--work {
   background-color: #eee;
-  // display: block;
-  // padding: 2rem 0;
+  display: block;
+  padding: 2rem 0;
   text-align: center;
+  height: auto;
 
-  // > .container {
-  //   display: block;
-  //   vertical-align: baseline;
-  // }
+  > .container {
+    display: block;
+    vertical-align: baseline;
+  }
+}
+
+.work-item {
+  display: block;
+  margin: 1rem 0;
+  background-color: #666;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 13.375rem;
+  text-align: left;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+
+  a {
+    color: #fff;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 40%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,.9));
+  }
+
+  &__title, &__description {
+    float: left;
+    height: 100%;
+    padding: .5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    display: block;
+    border: 0;
+    width: 60%;
+    text-shadow: 3px 3px 8px #212121;
+
+    > span {
+      position: absolute;
+      bottom: .5rem;
+    }
+  }
+
+  &__description {
+    width: 40%;
+    font-size: .875rem;
+    overflow: scroll;
+    font-weight: normal;
+    background-color: #fff;
+    color: #222;
+    opacity: 0.8;
+
+    a {
+      color: #222;
+    }
+
+    > p {
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+  }
+
+  &:hover, &:focus, &:active {
+    color: #fff;
+
+    .work-item__description {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 600px) {
+    float: left;
+    width: calc(50% - .5rem);
+    margin: .25rem;
+  }
+
+  @media (min-width: 800px) {
+    height: 16rem;
+
+    &:before {
+      right: 0;
+    }
+
+    &__title, &__description {
+      float: none;
+      width: 100%;
+      margin-top: 13.5rem;
+      transition: margin-top 300ms;
+    }
+
+    &__title {
+      height: 2.5rem;
+    }
+
+    &__description {
+      height: 13.5rem;
+      padding: 0 .5rem .5rem;
+      background: transparent;
+      color: #fff;
+      opacity: 1;
+      text-shadow: 2px 2px 4px #212121;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &:hover, &:active, &:focus {
+      &:before {
+        background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.9));
+      }
+
+      .work-item__title, .work-item__description {
+        margin-top: 0;
+      }
+    }
+  }
 }

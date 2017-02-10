@@ -36,6 +36,10 @@ a {
   }
 }
 
+code, pre, kbd {
+  font-family: $monospace-font;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
@@ -43,7 +47,7 @@ a {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 
-  &::after {
+  &:after {
     content: '';
     display: table;
     clear: both;
